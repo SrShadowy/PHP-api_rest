@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    ports: 
+      - "8000:80"
+    volumes:
+      - ./source:/var/www/source
+      - ./data:/var/www/data
+      - ./test:/var/www/test
+  
